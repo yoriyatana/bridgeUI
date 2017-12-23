@@ -1,0 +1,1 @@
+default_app_config = 'script_backup.apps.Script_BackupConfig'

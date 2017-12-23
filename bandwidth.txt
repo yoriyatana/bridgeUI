@@ -1,0 +1,8 @@
+set logical-systems A1 firewall policer 14M if-exceeding bandwidth-limit 14m burst-size-limit 525k
+set logical-systems A1 firewall policer 14M then discard
+set logical-systems A1 firewall policer 170M if-exceeding bandwidth-limit 170m burst-size-limit 6375k
+set logical-systems A1 firewall policer 170M then discard
+set logical-systems A1 firewall family inet filter f.up-ixp term up_ixp_LLSG025_DaiHocCongNghiepThucPham1 then policer 14M
+set logical-systems A1 firewall family inet filter f.down-ISPOther term down_ixp_LLSG025_DaiHocCongNghiepThucPham1 then policer 14M
+set logical-systems A1 firewall family inet filter f.up-nix term up_nix_LLSG025_DaiHocCongNghiepThucPham1 then policer 170M
+set logical-systems A1 firewall family inet filter f.down-ISPOther term down_nix_LLSG025_DaiHocCongNghiepThucPham1 then policer 170M
